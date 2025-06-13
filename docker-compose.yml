@@ -1,0 +1,21 @@
+
+services:
+  fastapi-app:
+    build: ./python-producer
+    container_name: fastapi-service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - sqlite-db
+
+  sqlite-db:
+    image: nouchka/sqlite3
+    container_name: sqlite-service
+    volumes:
+      - ./data:/data
+
+  csharp-consumer:
+    build: ./csharp-consumer
+    container_name: csharp-client
+    depends_on:
+      - fastapi-app

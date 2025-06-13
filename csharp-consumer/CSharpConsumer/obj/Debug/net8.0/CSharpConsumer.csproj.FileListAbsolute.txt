@@ -1,0 +1,17 @@
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\bin\Debug\net8.0\CSharpConsumer.exe
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\bin\Debug\net8.0\CSharpConsumer.deps.json
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\bin\Debug\net8.0\CSharpConsumer.runtimeconfig.json
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\bin\Debug\net8.0\CSharpConsumer.dll
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\bin\Debug\net8.0\CSharpConsumer.pdb
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.csproj.AssemblyReference.cache
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.AssemblyInfoInputs.cache
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.AssemblyInfo.cs
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.csproj.CoreCompileInputs.cache
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpCo.F37BD3BB.Up2Date
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.dll
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\refint\CSharpConsumer.dll
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.pdb
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.genruntimeconfig.cache
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\ref\CSharpConsumer.dll

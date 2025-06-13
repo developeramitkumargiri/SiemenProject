@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Viewer</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { width: 80%; margin: auto; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ddd; }
+        button { padding: 10px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>SiemenDemo - Random Data Viewer</h1>
+    <table>
+        <thead>
+            <tr><th>ID</th><th>Name</th><th>Value</th></tr>
+        </thead>
+        <tbody id="data-table"></tbody>
+    </table>
+
+    <button id="prevPage">Previous</button>
+    <button id="nextPage">Next</button>
+
+<script>
+    let currentPage = 1;
+    const pageSize = 10;
+
+    async function fetchData(page) {
+        const response = await fetch(`http://localhost:5000/data?page=${page}&page_size=${pageSize}`);
+        const data = await response.json();
+
+        const tableBody = document.getElementById("data-table");
+        tableBody.innerHTML = "";
+
+
+        data.data.reverse().forEach(item => {
+            let row = `<tr><td>${item[0]}</td><td>${item[1]}</td><td>${item[2]}</td></tr>`;
+            tableBody.innerHTML += row;
+        });
+    }
+
+    document.getElementById("nextPage").addEventListener("click", async () => {
+        await fetch("http://localhost:5000/next"); 
+        currentPage--; 
+        fetchData(currentPage);
+    });
+
+    document.getElementById("prevPage").addEventListener("click", () => {
+        currentPage++;
+        fetchData(currentPage);
+    });
+
+    fetchData(currentPage);
+</script>
+
+</body>
+</html>
