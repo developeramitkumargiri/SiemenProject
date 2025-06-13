@@ -15,8 +15,9 @@ SiemenProject is a **containerized microservice application** that integrates a 
 ## How to Run the Application
 
   ### Prerequisites  
-  Before running, ensure the following are installed:
-  - **Docker & Docker Compose** → [Download here](https://www.docker.com/products/docker-desktop)
+  1. Before running, ensure the following are installed:
+    - **Docker & Docker Compose** → [Download here](https://www.docker.com/products/docker-desktop)
+  2. Fetch code from Git and Open with VS Code Studio.
   
   ### Build and Start the Containers
   - docker-compose up -d --build  -> (Run this command inside , root folder after getting code from Github in VS code ,It will create image and create container)
