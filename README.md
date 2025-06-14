@@ -1,10 +1,11 @@
 # SiemenProject - Dockerized FastAPI Producer & C# Consumer
 
 ## Overview
-SiemenProject is a **containerized microservice application** that integrates a **Python FastAPI Producer** and a **C# Consumer** using Docker.  
-- The **Python Producer** serves randon data via an API.  
-- The **C# Consumer** fetches and processes data from the Producer and list on UI.
-- Both services are managed using **Docker Compose** for seamless deployment.  
+This project implements a **producer-consumer** model where:
+- **A Python producer** generates and stores **random data** in an SQLite database.
+- **A C# consumer** fetches and processes the data via an **HTTP request**.
+- Both services run inside **Docker containers and are orchestrated** using Docker Compose.
+  
 
 ---
 
