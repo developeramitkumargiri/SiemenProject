@@ -25,35 +25,36 @@
     <button id="nextPage">Next</button>
 
 <script>
-    let currentPage = 1;
-    const pageSize = 10;
+    document.addEventListener("DOMContentLoaded", () => {
+        let currentPage = 1;
+        const pageSize = 10;
 
-    async function fetchData(page) {
-        const response = await fetch(`http://localhost:5000/data?page=${page}&page_size=${pageSize}`);
-        const data = await response.json();
+        async function fetchData(page) {
+            const response = await fetch(`http://localhost:5000/data?page=${page}&page_size=${pageSize}`);
+            const data = await response.json();
 
-        const tableBody = document.getElementById("data-table");
-        tableBody.innerHTML = "";
+            const tableBody = document.getElementById("data-table");
+            tableBody.innerHTML = "";
 
+            data.data.reverse().forEach(item => {
+                let row = `<tr><td>${item.id}</td><td>${item.name}</td><td>${item.value}</td></tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
 
-        data.data.reverse().forEach(item => {
-            let row = `<tr><td>${item[0]}</td><td>${item[1]}</td><td>${item[2]}</td></tr>`;
-            tableBody.innerHTML += row;
+        document.getElementById("nextPage").addEventListener("click", async () => {
+            await fetch("http://localhost:5000/next"); 
+            currentPage--; 
+            fetchData(currentPage);
         });
-    }
 
-    document.getElementById("nextPage").addEventListener("click", async () => {
-        await fetch("http://localhost:5000/next"); 
-        currentPage--; 
+        document.getElementById("prevPage").addEventListener("click", () => {
+            currentPage++;
+            fetchData(currentPage);
+        });
+
         fetchData(currentPage);
     });
-
-    document.getElementById("prevPage").addEventListener("click", () => {
-        currentPage++;
-        fetchData(currentPage);
-    });
-
-    fetchData(currentPage);
 </script>
 
 </body>

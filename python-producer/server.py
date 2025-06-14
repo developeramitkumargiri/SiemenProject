@@ -36,7 +36,13 @@ def get_data(page: int = 1, page_size: int = 10):
     rows = cursor.fetchall()
     conn.close()
     
-    return {"data": rows, "page": page, "page_size": page_size}
+    # return {"data": rows, "page": page, "page_size": page_size}
+
+    formatted_data = [{"id": row[0], "name": row[1], "value": row[2]} for row in rows]
+
+    return {"data": formatted_data}
+
+    # return {"data": rows}
 
 @app.get("/next")
 def insert_new_data():
