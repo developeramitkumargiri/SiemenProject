@@ -20,7 +20,7 @@ services:
     container_name: sqlite-service
     networks:
       - my_network
-    command: ["sh", "-c", "while true; do sleep 30; done"]  # 🔹 Prevents the container from exiting
+    command: ["sh", "-c", "while true; do sleep 30; done"] 
 
   csharp-consumer:
     build: ./csharp-consumer
@@ -29,7 +29,7 @@ services:
       - my_network
     depends_on:
       - fastapi-app
-    restart: always  # 🔹 Ensures C# container does not exit unexpectedly
-    command: ["sh", "-c", "while true; do sleep 30; done"]  # 🔹 Keeps it alive
+    restart: always 
+    command: ["sh", "-c", "while true; do sleep 30; done"]  
     environment:
-      - DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER=0  # 🔹 Fixes .NET DNS resolution issue
+      - DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER=0 
