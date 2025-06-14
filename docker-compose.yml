@@ -1,8 +1,15 @@
+version: '3.8'
+
+networks:
+  my_network:
+    driver: bridge
 
 services:
   fastapi-app:
     build: ./python-producer
     container_name: fastapi-service
+    networks:
+      - my_network
     ports:
       - "5000:5000"
     depends_on:
@@ -11,11 +18,18 @@ services:
   sqlite-db:
     image: nouchka/sqlite3
     container_name: sqlite-service
-    volumes:
-      - ./data:/data
+    networks:
+      - my_network
+    command: ["sh", "-c", "while true; do sleep 30; done"]  # 🔹 Prevents the container from exiting
 
   csharp-consumer:
     build: ./csharp-consumer
     container_name: csharp-client
+    networks:
+      - my_network
     depends_on:
       - fastapi-app
+    restart: always  # 🔹 Ensures C# container does not exit unexpectedly
+    command: ["sh", "-c", "while true; do sleep 30; done"]  # 🔹 Keeps it alive
+    environment:
+      - DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER=0  # 🔹 Fixes .NET DNS resolution issue

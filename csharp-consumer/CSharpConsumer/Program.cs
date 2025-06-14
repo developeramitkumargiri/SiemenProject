@@ -16,10 +16,15 @@ class Program
             {
                 //var response = await client.GetAsync("http://localhost:5000/data");
                 var response = await client.GetAsync("http://fastapi-service:5000/data");
+                //var response = await client.GetAsync("http://fastapi-service:5000/data?page=1&page_size=10");
+
+               // Console.WriteLine("Value is " + response);
                 if (response.IsSuccessStatusCode)
                 {
                     isReady = true;
                     var jsonData = await response.Content.ReadFromJsonAsync<Response>();
+
+                    Console.WriteLine("Fetch via FastApi from Python service");
 
                     foreach (var item in jsonData.data)
                     {

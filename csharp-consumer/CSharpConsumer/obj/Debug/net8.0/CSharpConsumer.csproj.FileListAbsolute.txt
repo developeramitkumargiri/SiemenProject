@@ -15,3 +15,4 @@ C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsume
 C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.pdb
 C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.genruntimeconfig.cache
 C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\ref\CSharpConsumer.dll
+C:\Users\amitVMmachine2025\Documents\SiemenProject\csharp-consumer\CSharpConsumer\obj\Debug\net8.0\CSharpConsumer.sourcelink.json
